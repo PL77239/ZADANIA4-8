@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .then(response => {
                     if (response.ok) {
-                        alert('Dziękujemy! Twoja wiadomość została wysłana i zapisana na serwerze.');
+                        alert('Wiadomość wysłana');
                         form.reset();
                     } else {
                         throw new Error('Błąd serwera');
@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.disabled = false;
                 });
             }
-            // --- TUTAJ KOŃCZY SIĘ NOWY KOD ---
         });
     }
 });
