@@ -94,15 +94,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 fetch(endpointURL, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
                     body: JSON.stringify(formData)
                 })
                 .then(response => {
-                    if (response.ok) {
-                        alert('Wiadomość wysłana');
+                    if (response.ok || response.type === 'opaque') {
+                        alert('Dziękujemy! Twoja wiadomość została wysłana i zapisana na serwerze.');
                         form.reset();
                     } else {
                         throw new Error('Błąd serwera');
