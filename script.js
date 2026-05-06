@@ -11,11 +11,11 @@ themeBtn.addEventListener('click', () => {
 
     if (currentTheme === 'red.css') {
         themeStyle.setAttribute('href', 'green.css');
-        themeBtn.textContent = 'Zmieñ na Czerwony';
+        themeBtn.textContent = 'Zmień na Czerwony';
         themeBtn.style.backgroundColor = '#f44336';
     } else {
         themeStyle.setAttribute('href', 'red.css');
-        themeBtn.textContent = 'Zmieñ na Zielony';
+        themeBtn.textContent = 'Zmień na Zielony';
         themeBtn.style.backgroundColor = '#4caf50'; 
     }
 });
@@ -24,11 +24,12 @@ toggleBtn.addEventListener('click', () => {
     projectsSection.classList.toggle('hidden');
 
     if (projectsSection.classList.contains('hidden')) {
-        toggleBtn.textContent = 'Poka¿ Projekty';
+        toggleBtn.textContent = 'Pokaż Projekty';
     } else {
         toggleBtn.textContent = 'Ukryj Projekty';
     }
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
 
@@ -77,9 +78,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (isValid) {
-                alert('Formularz został poprawnie zwalidowany! (Frontend działa, brak wysyłki na serwer)');
-                form.reset();
+                const formData = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    message: message,
+                    timestamp: new Date().toISOString()
+                };
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.textContent = 'Wysyłanie...';
+                submitBtn.disabled = true;
+                const endpointURL = 'https://webhook.site/064f1db8-70de-4804-84be-59d5e71f8e21'; 
+
+                fetch(endpointURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Dziękujemy! Twoja wiadomość została wysłana i zapisana na serwerze.');
+                        form.reset();
+                    } else {
+                        throw new Error('Błąd serwera');
+                    }
+                })
+                .catch(error => {
+                    alert('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.');
+                    console.error('Błąd:', error);
+                })
+                .finally(() => {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                });
             }
+            // --- TUTAJ KOŃCZY SIĘ NOWY KOD ---
         });
     }
 });
@@ -158,7 +196,7 @@ function addCustomProject() {
     const desc = newProjectDesc.value.trim();
 
     if (!title || !desc) {
-        alert('Proszę podać zarówno tytuł, jak i opis projektu.');
+        alert('Tytuł oraz opis projektu:');
         return;
     }
 
