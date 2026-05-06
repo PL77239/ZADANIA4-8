@@ -1,0 +1,29 @@
+{
+  "skills": [
+    "HTML5",
+    "C++",
+    "Podstawy PyCharm",
+    "Fusion360, AutoCAD, Rhino3D",
+    "Adobe Photoshop, Illustrator",
+    "FL Studio, Ableton Live",
+    "Programy Microsoft 365 Office"
+  ],
+  "projects": [
+    {
+      "title": "Zmodyfikowana nawigacja",
+      "description": "mapa pokazująca drogę (Bądź tylko mapę) omijając progi spowalniające, zaciągnięte z publicznych baz danych. Nawigacja oparta na projekcie open-source"
+    },
+    {
+      "title": "Bodykit 180SX",
+      "description": "Zaprojektowany od podstaw, drukowany wielokrotnie gwoli przymiarek, montaż formy do laminatu."
+    },
+    {
+      "title": "Merchandising",
+      "description": "wprowadzenie na rynek CEE ubrań, oraz rzadszych produktów z podpisami jako gałąź firmy"
+    },
+    {
+      "title": "Syntezator",
+      "description": "Syntezator z kontrolerem MIDI zbudowany w formie aplikacji na C#, z funkcjami fal i modulacji"
+    }
+  ]
+}
