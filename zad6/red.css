@@ -1,0 +1,40 @@
+/* PL77239 */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    background-color: #ffebeb;
+}
+
+.cv-content {
+    color: #4a1c1c;
+}
+
+h1, h2, h3 {
+    color: #b71c1c;
+}
+
+header {
+    border-bottom-color: #b71c1c;
+}
+
+    header .header-photo-wrapper {
+        border-color: #b71c1c;
+    }
+
+a {
+    color: #f44336;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+article {
+    border-left-color: #f44336;
+    background-color: #fffafb;
+}

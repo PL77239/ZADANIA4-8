@@ -1,0 +1,139 @@
+<!-- PL77239 -->
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Błaż - CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link id="theme-style" rel="stylesheet" href="red.css">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="theme-switcher">
+            <button id="theme-btn" class="btn-theme green-btn" style="background-color: #4caf50;">Zmień na Zielony</button>
+            <button id="toggle-btn" class="btn-theme" style="background-color: #333; margin-left: 10px;">Ukryj Projekty</button>
+        </div>
+
+        <div class="cv-content">
+            <header>
+                <div class="header-photo-wrapper">
+                    <img src="\Mac\Home\Downloads\rgiii_hyperblack_white.jpg.webp" alt="Autoportret Janka." class="profile-photo">
+                </div>
+                <h1>Jan Błaż</h1>
+            </header>
+
+            <main>
+                <section>
+                    <h2>Kontakt</h2>
+                    <ul>
+                        <li>Email: <a href="mailto:jmtentertainment777@gmail.com">jmtentertainment777@gmail.com</a></li>
+                        <li>Telefon: <a href="tel:+48697655050">+48 697 655 050</a></li>
+                        <li>Miasto: Warszawa</li>
+                    </ul>
+                    <p>Profile w sieci:</p>
+                    <ul>
+                        <li><a href="https://github.com/PL77239/zad1_cv" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>O mnie</h2>
+                    <p>Na codzień oprócz studiów zajmuję się marketingiem, programowaniem oraz produkcją muzyczną. Gdy znajdę czas, tworzę również modele oraz wydruki 3D na zlecenie jak i dla współtworzonej firmy. W wolnym czasie lubię uczyć się nowych umiejętności, nawet tych, które są odległe mojemu kierunkowi.</p>
+                </section>
+
+                <section>
+                    <h2>Umiejętności</h2>
+                    <ul id="skills-list"></ul>
+                </section>
+
+                <section>
+                    <h2>Doświadczenie</h2>
+                    <article>
+                        <h3>Młodszy specjalista ds. marketingu</h3>
+                        <p>Okres: 01.2023 - obecnie</p>
+                        <p>Wdrażanie firm zagranicznych na rynki CEE, organizowanie spotkań B2B, organizacja targów B2B w Polsce oraz Egipcie, bieżące zarządzanie bazami klientów</p>
+                    </article>
+                    <article>
+                        <h3>Freelance 3D Designer</h3>
+                        <p>Okres: 04.2023 - obecnie</p>
+                        <p>Projektowanie od rysunku technicznego, po wizualizacje obiektów technicznych (głównie automotive) oraz obiektów </p>
+                    </article>
+                    <article>
+                        <h3>Przedstawiciel handlowy - EnergyMatch</h3>
+                        <p>Okres: 06.2020 - 12.2021</p>
+                        <p>Sprzedaż D2D/Cold Leads.</p>
+                    </article>
+                    <article>
+                        <h3>Specjalista ds. sprzedaży - SentiOne</h3>
+                        <p>Okres: 07.2019 - 03.2020</p>
+                        <p>Utrzymywanie relacji z nowymi i stałymi klientami, sourcing</p>
+                    </article>
+                </section>
+
+                <section>
+                    <h2>Edukacja</h2>
+                    <article>
+                        <p><strong>Uczelnia Vistula</strong></p>
+                        <p>Lata: 2025 - obecnie | Profil: Front-end developer</p>
+                    </article>
+                    <article>
+                        <p><strong>Politecnico di Torino</strong></p>
+                        <p>Lata: 2021 - 2023 | Profil: Automotive Engineering</p>
+                    </article>
+                    <article>
+                        <p><strong>Fundacja Nauka i Wiedza LO nr.40</strong></p>
+                        <p>Lata: 2017-2020</p>
+                    </article>
+                </section>
+
+                <section id="projects-section">
+                    <h2>Projekty</h2>
+                    <ul id="projects-list"></ul>
+                </section>
+              <section id="contact-section">
+                    <h2>Formularz kontaktowy</h2>
+                    <form id="contact-form" novalidate>
+                        <div>
+                            <label for="firstName">Imię:</label><br>
+                            <input type="text" id="firstName" name="firstName">
+                            <span class="error-message" id="firstNameError" style="color: red; font-size: 0.9em;"></span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="lastName">Nazwisko:</label><br>
+                            <input type="text" id="lastName" name="lastName">
+                            <span class="error-message" id="lastNameError" style="color: red; font-size: 0.9em;"></span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">E-mail:</label><br>
+                            <input type="email" id="email" name="email">
+                            <span class="error-message" id="emailError" style="color: red; font-size: 0.9em;"></span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="message">Wiadomość:</label><br>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                            <span class="error-message" id="messageError" style="color: red; font-size: 0.9em;"></span>
+                        </div>
+                        <br>
+                        <button type="submit">Wyślij wiadomość</button>
+                    </form>
+                </section>
+                
+            </main>
+
+            <footer>
+                <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych...).</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* PL77239 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.page-wrapper {
+    background-color: #e8f5e9;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #e8f5e9 10%, #a5d6a7 100%);
+}
+
+.cv-content {
+    color: #1a3a1a;
+}
+
+h1, h2, h3 {
+    color: #2e7d32;
+}
+
+header {
+    border-bottom-color: #2e7d32;
+}
+
+    header .header-photo-wrapper {
+        border-color: #2e7d32;
+    }
+
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+article {
+    border-left-color: #4caf50;
+    background-color: #f6fbf6;
+}
