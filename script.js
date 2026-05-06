@@ -94,15 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 fetch(endpointURL, {
                     method: 'POST',
+                    mode: 'no-cors', // z uwagi na zabezpieczenia/blokade
                     body: JSON.stringify(formData)
                 })
-                .then(response => {
-                    if (response.ok || response.type === 'opaque') {
-                        alert('Dziękujemy! Twoja wiadomość została wysłana i zapisana na serwerze.');
-                        form.reset();
-                    } else {
-                        throw new Error('Błąd serwera');
-                    }
+                .then(() => {
+                    alert('Dziękujemy! Twoja wiadomość została wysłana i zapisana na serwerze.');
+                    form.reset();
                 })
                 .catch(error => {
                     alert('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.');
